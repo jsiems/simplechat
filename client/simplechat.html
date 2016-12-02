@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 800px)" href="public/css/simplechatMobile.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 800px)" href="public/css/simplechatPc.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="public/javascript/simplechat.js"></script>
+  
+  <script>
+  
+  console.log("this is logged in the html");
+  console.log("You gotta make sure when all people leave a room it is actually removed. gotta.");
+  $(document).ready(function() {
+
+    $("#connectedDiv").hide();
+
+    $(window).resize(function() {
+      updateScroll(true);
+    });
+
+    $("#message").keyup(function(e){
+      console.log("Keyup");
+      var code = e.keyCode ? e.keyCode : e.which;
+      if(code == 13) {
+        sendMessage();
+      }
+    });
+  });
+  
+  </script>
+</head>
+<body>
+  <div class="title">simplechat</div>
+  <div class="contentConnect" id="connectDiv">
+    <textarea class="inputText" id="usernameTextarea" rows=1 placeholder="username"></textarea>
+    <textarea class="inputText" id="roomTextarea" rows=1 placeholder="room"></textarea>
+    <button class="inputButton" onclick = "connect()">Connect</button>
+  </div>
+  
+  <div class="contentConnected" id="connectedDiv">
+    <div class="infoTitle" id="usernameDiv">username:</div>
+    <div class="infoTitle" id="roomDiv">room:</div>
+    <div class="messageBox" id="messageBox"></div>
+    <textarea class="inputText stretch" id="message" placeholder="enter message"></textarea>
+    <div class="buttonContainer">
+      <button class="inputButton" onclick="disconnect()">Disconnect</button>
+      <button class="inputButton" onclick="sendMessage()">Send Message</button>
+    </div>
+  </div>
+</body>
+</html>

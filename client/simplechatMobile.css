@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+* {
+  font-family: Verdana;
+}
+
+span {
+  font-family: Courier;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 5em;
+  font-family: courier;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.contentConnect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentConnected {
+  position: absolute;
+  top: 200px;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputText {
+  font-size: 3.5em;
+  margin: 20px;
+  resize: none;
+  border: 2px solid black;
+}
+
+.inputButton {
+  font-size: 3.5em;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+}
+
+.infoTitle {
+  display: inline-block;
+  font-size: 3em;
+}
+
+.messageBox {
+  position: relative;
+  width: 90%;
+  border: 1px solid grey;
+  font-size: 2em;
+  flex-grow: 3;
+  max-height: 60%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.server {
+  font-style: italic;
+}
+
+.me {
+  font-weight: bold;
+}
