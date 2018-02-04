@@ -4,21 +4,6 @@ var room = "";
 var lines = 0;
 var maxLines = 100;
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-console.log("Move this sendPost function to index please");
-function sendPost() {
-  $.ajax({
-    url:'/test',
-    method: 'POST',
-    contentType: "application/json",
-    dataType: 'json',
-    data: JSON.stringify({text: 'banana'})
-  }).done(function(data) {
-    console.log('Finished request, here is data');
-    console.log(data);
-  });
-}
-
 function connect() {
   //declares global websocket that can be used everywhere
   ws = new WebSocket('ws://' + document.location.hostname, 'chat');
